@@ -11,10 +11,10 @@ import java.util.Optional;
 
 import static ch.qos.logback.core.joran.spi.ConsoleTarget.findByName;
 
-@Service
+
 public class MemberService {
     private final MemberRepository memberRepository;
-    @Autowired
+
     public MemberService(MemberRepository memberRepository)
     {
         this.memberRepository = memberRepository;
