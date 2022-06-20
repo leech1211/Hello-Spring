@@ -3,14 +3,18 @@ package changhoon.hellospring.service;
 import changhoon.hellospring.domain.Member;
 import changhoon.hellospring.repository.MemberRepository;
 import changhoon.hellospring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 import static ch.qos.logback.core.joran.spi.ConsoleTarget.findByName;
 
+@Service
 public class MemberService {
     private final MemberRepository memberRepository;
+    @Autowired
     public MemberService(MemberRepository memberRepository)
     {
         this.memberRepository = memberRepository;

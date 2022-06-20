@@ -1,9 +1,11 @@
 package changhoon.hellospring.repository;
 
 import changhoon.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository
 public class MemoryMemberRepository implements MemberRepository{
 
     //save할때 저장하는 공간
