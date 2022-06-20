@@ -10,7 +10,11 @@ import java.util.Optional;
 import static ch.qos.logback.core.joran.spi.ConsoleTarget.findByName;
 
 public class MemberService {
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+    public MemberService(MemberRepository memberRepository)
+    {
+        this.memberRepository = memberRepository;
+    }
 
     /**
      * 회원가입
