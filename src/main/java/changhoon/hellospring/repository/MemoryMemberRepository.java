@@ -22,7 +22,7 @@ public class MemoryMemberRepository implements MemberRepository{
     }
 
     @Override
-    public Optional<Member> findByid(Long id) {
+    public Optional<Member> findById(Long id) {
         //return store.get(id); //이렇게 하면 NULL이 반환될 가능성이 있음
         return Optional.ofNullable(store.get(id));  //이렇게 하면 NULL이어도 감싸서 반환 할 수 있다
     }
