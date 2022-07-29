@@ -1,5 +1,6 @@
 package changhoon.hellospring;
 
+import changhoon.hellospring.repository.JDBCTemplateMemberRepository;
 import changhoon.hellospring.repository.JdbcMemberRepository;
 import changhoon.hellospring.repository.MemberRepository;
 import changhoon.hellospring.repository.MemoryMemberRepository;
@@ -22,8 +23,9 @@ public class SpringConfig {
     }
     @Bean
     public MemberRepository memberRepository() {
-// return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+        // return new MemoryMemberRepository();
+        //return new JdbcMemberRepository(dataSource);
+        return new JDBCTemplateMemberRepository(dataSource);
     }
 }
 
